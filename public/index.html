@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <svg class="calc-img" viewBox="0 0 100 100" width="200" height="200">
+      <rect x="10" y="10" width="80" height="80" rx="10" fill="#4CAF50"/>
+      <text x="50" y="55" font-size="12" text-anchor="middle" fill="white" font-weight="bold">CALC</text>
+      <circle cx="30" cy="75" r="5" fill="white"/>
+      <circle cx="40" cy="75" r="5" fill="white"/>
+      <circle cx="50" cy="75" r="5" fill="white"/>
+      <circle cx="60" cy="75" r="5" fill="white"/>
+      <circle cx="70" cy="75" r="5" fill="white"/>
+    </svg>
+    
+    <div class="input-group">
+      <input type="number" id="num1" placeholder="First number">
+      <input type="number" id="num2" placeholder="Second number">
+    </div>
+    
+    <div class="operations">
+      <button class="btn" onclick="calculate('add')" data-op="add">1. Add (+)</button>
+      <button class="btn" onclick="calculate('sub')" data-op="sub">2. Subtract (-)</button>
+      <button class="btn" onclick="calculate('mul')" data-op="mul">3. Multiply (×)</button>
+      <button class="btn" onclick="calculate('div')" data-op="div">4. Divide (÷)</button>
+    </div>
+    
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
